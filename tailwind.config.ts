@@ -55,7 +55,29 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		keyframes: {
+			menu: {
+				"0%":{
+					width: "0",
+					opacity: "0"
+				},
+				"100%":{
+					width: "14em",
+					opacity: "1"
+				}
+			},
+			closeMenu:{
+				"100% 0%":{
+					width: "0",
+					opacity: "1"
+				}
+			}
+		},
+		animation:{
+			"menu-open" : "menu 0.4s linear",
+			"menu-close" : "menuClose 0.2s ease"
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
