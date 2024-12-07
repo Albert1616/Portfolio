@@ -40,8 +40,8 @@ const Header = ({ isDarkMode, setIsDarkMode }: headerProps) => {
                     <Link
                         key={link.name}
                         href={link.path}
-                        className="text-black dark:text-white text-xl md:text-2xl hover:text-purple-400 
-                hover:scale-110"
+                        className="text-black dark:text-white text-xl md:text-2xl hover:text-purple-500 
+                hover:scale-110 dark:hover:text-purple-500"
                     >
                         {link.name}
                     </Link>

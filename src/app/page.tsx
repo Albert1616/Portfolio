@@ -2,6 +2,7 @@
 
 import DashBoardWrapper from '@/components/DashBoardWrapper'
 import Header from '@/components/Header'
+import HeroSection from '@/components/HeroSection'
 import { useState } from 'react'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <DashBoardWrapper>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <HeroSection />
     </DashBoardWrapper>
   )
 }

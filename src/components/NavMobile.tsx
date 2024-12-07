@@ -25,7 +25,7 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
     <div className="flex lg:hidden">
       {isOpen ? (
         <motion.div
-          className="flex flex-col  gap-5 fixed top-0 right-0 w-[14em] h-full bg-gray-400 px-5 py-8"
+          className="z-50 flex flex-col  gap-5 fixed top-0 right-0 w-[14em] h-full bg-gray-400 px-5 py-8"
           initial={{ width: 0, opacity: 0 }}
           animate={{ width: '14em', opacity: 1 }}
           exit={{ width: 0, opacity: 0 }}
@@ -37,6 +37,7 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.5, ease: 'linear' }}
+              className="hover:text-purple-500"
             >
               {isDarkMode ? <Sun size={25} /> : <Moon size={25} />}
             </motion.button>
@@ -46,6 +47,7 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.5, ease: 'linear' }}
+              className="hover:text-purple-500"
             >
               <X size={25} />
             </motion.button>
@@ -61,7 +63,7 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
                 <Link
                   key={link.name}
                   href={link.path}
-                  className="flex text-xl font-semibold text-white hover:text-purple-400
+                  className="flex text-xl font-semibold text-white hover:text-purple-500
                         hover:scale-x-110"
                 >
                   {link.name}
