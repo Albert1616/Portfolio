@@ -3,9 +3,11 @@
 
 import { LINKS } from '@/lib/utils'
 import { Moon, Sun } from 'lucide-react'
+import { motion } from 'motion/react'
 import Link from 'next/link'
 import React from 'react'
 import NavMobile from './NavMobile'
+import Nav from './Nav'
 
 interface headerProps {
     isDarkMode: boolean
@@ -31,29 +33,21 @@ const Header = ({ isDarkMode, setIsDarkMode }: headerProps) => {
                 className="text-black dark:text-white text-[2.5em] md:text-[3em] font-semibold"
             >
                 ALBERT
-                <span className="text-purple-400 ml-2">.</span>
+                <span className="text-purple-500 ml-2">.</span>
             </Link>
 
             <NavMobile isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             <div className="items-center gap-5 hidden lg:flex">
-                {LINKS.map((link) => (
-                    <Link
-                        key={link.name}
-                        href={link.path}
-                        className="text-black dark:text-white text-xl md:text-2xl hover:text-purple-500 
-                hover:scale-110 dark:hover:text-purple-500"
-                    >
-                        {link.name}
-                    </Link>
-                ))}
+                <Nav isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 
                 <div className="flex items-center justify-center text-black dark:text-white">
-                    <button onClick={() => handleViewMode()}>
+                    <motion.button onClick={() => handleViewMode()}
+                        whileTap={{ rotate: 3 }}>
                         {isDarkMode ? <Sun size={25} /> : <Moon size={25} />}
-                    </button>
+                    </motion.button>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

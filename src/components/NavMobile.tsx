@@ -1,8 +1,7 @@
-import { LINKS } from '@/lib/utils'
 import { Menu, Moon, Sun, X } from 'lucide-react'
 import { motion } from 'motion/react'
-import Link from 'next/link'
 import React, { useState } from 'react'
+import Nav from './Nav'
 
 interface navMobileProps {
   isDarkMode: boolean
@@ -25,7 +24,7 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
     <div className="flex lg:hidden">
       {isOpen ? (
         <motion.div
-          className="z-50 flex flex-col  gap-5 fixed top-0 right-0 w-[14em] h-full bg-gray-400 px-5 py-8"
+          className="z-50 flex flex-col  gap-5 fixed top-0 right-0 w-[14em] h-full bg-gray-400 px-5 pt-8"
           initial={{ width: 0, opacity: 0 }}
           animate={{ width: '14em', opacity: 1 }}
           exit={{ width: 0, opacity: 0 }}
@@ -53,28 +52,12 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
             </motion.button>
           </div>
           <div className="flex flex-col gap-8 items-end mt-4">
-            {LINKS.map((link) => (
-              <motion.p
-                key={link.name}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.4, delay: 0.5, ease: 'linear' }}
-              >
-                <Link
-                  key={link.name}
-                  href={link.path}
-                  className="flex text-xl font-semibold text-white hover:text-purple-500
-                        hover:scale-x-110"
-                >
-                  {link.name}
-                </Link>
-              </motion.p>
-            ))}
+            <Nav isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
           </div>
         </motion.div>
       ) : (
         <button onClick={() => setIsOpen(true)}>
-          <Menu size={25} className="text-black dark:text-white" />
+          <Menu size={30} className="text-black dark:text-white" />
         </button>
       )}
     </div>

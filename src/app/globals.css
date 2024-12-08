@@ -20,6 +20,8 @@ body,
   @apply dark:bg-gray-800;
   @apply bg-gray-200;
   @apply text-gray-200;
+  @apply transition-colors duration-300 ease-linear;
+
 }
 
 @layer base {
