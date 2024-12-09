@@ -7,7 +7,7 @@ type Props = {
 }
 
 const DashBoardWrapper = ({ children }: Props) => {
-  return <div className="container mx-auto px-16 md:px-32">{children}</div>
+  return <div className="container mx-auto px-16 md:px-24">{children}</div>
 }
 
 export default DashBoardWrapper
