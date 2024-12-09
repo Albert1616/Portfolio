@@ -7,15 +7,19 @@ export function cn(...inputs: ClassValue[]) {
 
 export const LINKS = [
   {
-    name: 'About me',
+    name: 'Sobre mim',
     path: '/aboutme',
   },
   {
-    name: 'projects',
+    name: 'Skils',
+    path: '/skils',
+  },
+  {
+    name: 'Projetos',
     path: '/projects',
   },
   {
-    name: 'contact',
+    name: 'Contato',
     path: '/contact',
   },
 ]

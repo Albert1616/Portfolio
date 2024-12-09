@@ -41,10 +41,20 @@ const Header = ({ isDarkMode, setIsDarkMode }: headerProps) => {
                 <Nav isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 
                 <div className="flex items-center justify-center text-black dark:text-white">
-                    <motion.button onClick={() => handleViewMode()}
-                        whileTap={{ rotate: 3 }}>
+                <motion.button
+                onClick={() => handleViewMode()}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.5, ease: 'linear' }}
+                className="hover:text-purple-500"
+                >
+                    <motion.div
+                        whileHover={{ rotate: 360 }}  // Rotaciona o ícone em 180 graus ao passar o mouse
+                        transition={{ duration: 0.3 }}  // Define a duração da rotação
+                        >
                         {isDarkMode ? <Sun size={25} /> : <Moon size={25} />}
-                    </motion.button>
+                    </motion.div>
+                </motion.button>
                 </div>
             </div>
         </div >

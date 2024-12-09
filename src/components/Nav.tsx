@@ -22,7 +22,7 @@ const Nav = ({ isDarkMode, setIsDarkMode }: Props) => {
                         key={link.name}
                         href={link.path}
                         className="w-full flex text-2xl font-semibold text-black dark:text-white hover:text-purple-500
-                        hover:scale-110"
+                        dark:hover:text-purple-500 hover:scale-110"
                     >
                         {link.name}
                     </Link>
