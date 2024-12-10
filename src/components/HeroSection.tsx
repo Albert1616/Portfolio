@@ -5,7 +5,7 @@ import { TextGenerateEffect } from './ui/text-generate-effect'
 import Image from 'next/image'
 import { FaLinkedin, FaGithub, FaDownload } from "react-icons/fa";
 import Link from 'next/link';
-import {motion} from 'motion/react'
+import { motion } from 'motion/react'
 
 const HeroSection = () => {
     return (
@@ -15,39 +15,39 @@ const HeroSection = () => {
                     <TextGenerateEffect words='Olá, eu sou Matheus Albert, desenvolvedor web' />
                     <div className='flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 mt-4 md:mt-10'>
                         <motion.div className='flex items-center gap-4'
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        transition={{delay: 1.6}}>
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 1.6 }}>
                             <Link href=''>
-                                <FaLinkedin className='text-primaryColor hover:scale-125 ease-in-out duration-200' size={35}/>
+                                <FaLinkedin className='text-primaryColor hover:scale-125 ease-in-out duration-200' size={35} />
                             </Link>
                             <Link href=''>
-                                <FaGithub className='text-primaryColor hover:scale-125 ease-in-out duration-200' size={35}/>
+                                <FaGithub className='text-primaryColor hover:scale-125 ease-in-out duration-200' size={35} />
                             </Link>
                         </motion.div>
                         <motion.button className='w-64 text-lg font-semibold flex items-center 
                         justify-center gap-3 bg-primaryColor text-white rounded-lg p-4
                         hover:bg-[#8B2EE2] transition-colors duration-75'
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        transition={{delay: 1.8}}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 1.8 }}
                         >
-                            Baixar  CV <FaDownload size={15}/>
+                            Baixar  CV <FaDownload size={15} />
                         </motion.button>
                     </div>
                 </div>
                 <motion.div
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}>
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}>
                     <Image src='/hero-removebg.png'
                         alt='personal hero image'
                         width={400}
                         height={500}
-                        className='w-[23rem] h-[25rem] md:w-[50rem] md:h-[35rem]' />
+                        className='w-[23rem] h-[25rem] md:w-[50rem] md:h-[30rem]' />
                 </motion.div>
 
             </BackgroundBeamsWithCollision>
-            <h2 className='relative pt-60 text-black text-center text-2xl'>Sobre Mim</h2>
+            {/* <h2 className='relative pt-60 text-black text-center text-2xl'>Sobre Mim</h2> */}
         </div>
     )
 }
