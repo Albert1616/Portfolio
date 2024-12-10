@@ -41,13 +41,16 @@ const HeroSection = () => {
                     animate={{ opacity: 1 }}>
                     <Image src='/hero-removebg.png'
                         alt='personal hero image'
-                        width={400}
-                        height={500}
-                        className='w-[23rem] h-[25rem] md:w-[50rem] md:h-[30rem]' />
+                        width={1200}
+                        height={1200}
+                        loading='lazy'
+                        quality={100}
+                        objectFit='contain'
+                        className='w-full h-auto' />
                 </motion.div>
 
             </BackgroundBeamsWithCollision>
-            {/* <h2 className='relative pt-60 text-black text-center text-2xl'>Sobre Mim</h2> */}
+            <h2 className='absolute bottom-4 text-black dark:text-white text-center pt-20 text-xl md:text-2xl'>Sobre Mim</h2>
         </div>
     )
 }

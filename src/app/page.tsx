@@ -12,7 +12,7 @@ export default function Home() {
     <DashBoardWrapper>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <HeroSection />
-      <SobreMim />
+      {/* <SobreMim /> */}
     </DashBoardWrapper>
   )
 }
