@@ -23,3 +23,40 @@ export const LINKS = [
     path: '#contato',
   },
 ]
+
+export const ESCOLARIDADE = [
+  {
+    data: "2018-2022",
+    title: "Técnico em Informática para Internet",
+    key: "IFRN"
+  },
+  {
+    data: "2022 - atual",
+    title: "Bacharelado em Tecnologia da Informação",
+    key: "IMD - UFRN"
+  }
+]
+
+export const EXPERIENCIA = [
+  {
+   data: "2020-2022",
+   title: "Volutário em desenvolvimento de software" ,
+   key: "IFRN"
+  },
+  {
+    data: "2023-2024",
+    title: "Bolsista de pesquisa e iniciação científica",
+    key: "Instituto Nacional de Pesquisas Espaciais"
+  },
+  {
+    data: "2024 - atual",
+    title: "Estagiário T.I",
+    key: "Polícia Federal"
+  }
+]
+
+export const SKILLS = [
+  {
+    icon: 
+  }
+]
