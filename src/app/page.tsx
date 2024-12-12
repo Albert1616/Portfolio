@@ -11,8 +11,10 @@ export default function Home() {
   return (
     <DashBoardWrapper>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <HeroSection />
-      {/* <SobreMim /> */}
+      <div className="px-6 md:px-12">
+        <HeroSection />
+        <SobreMim />
+      </div>
     </DashBoardWrapper>
   )
 }

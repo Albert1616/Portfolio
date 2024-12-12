@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { LINKS } from '@/lib/utils'
 import Link from 'next/link'
 import { motion } from 'motion/react'
@@ -10,7 +11,7 @@ type Props = {
 
 const Nav = ({ isDarkMode, setIsDarkMode }: Props) => {
     return (
-        <div className='flex flex-col md:flex-row items-end gap-8 w-full'>
+        <div className="flex flex-col lg:flex-row items-end gap-8 w-full">
             {LINKS.map((link) => (
                 <motion.p
                     key={link.name}
