@@ -3,40 +3,48 @@ import React, { useEffect, useRef } from 'react'
 import { motion, useAnimation, useInView } from 'motion/react'
 
 const SobreMim = () => {
-  // const ref = useRef(null)
-  // const isInView = useInView(ref, { once: true })
-  // const animations = useAnimation()
+  // const ref = useRef(null);
+  // const isInView = useInView(ref, {once:true});
+  // const animations = useAnimation();
 
   // useEffect(() => {
   //   if (isInView) {
-  //     animations.start('visible')
+  //     animations.start("visible");
   //   }
   // }, [isInView])
 
   return (
-    <motion.section
-      className="py-36 md:py-48 lg:px-16 lg:py-32"
-    // variants={{
-    //   hidden: { opacity: 0, y: 75 },
-    //   visible: { opacity: 1, y: 0 },
-    // }}
-    // initial="hidden"
-    // animate={animations}
-    // transition={{ duration: 0.5, delay: 0.25 }}
+    <section
+      className="relative mt-20 md:mt-48 lg:mt-28 py-20"
+      id='sobremim'
     >
-      <div className="md:grid md:grid-cols-2 gap-8">
-        <div className="place-self-center">
+      <motion.h2 className='absolute top-0 left-1/2 translate-x-[-50%] text-black dark:text-white text-center text-2xl lg:text-3xl
+      font-semibold after:absolute after:-bottom-1 after:left-0 after:right-0 after:w-full after:h-[3px] after:bg-primaryColor '
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
+      transition={{duration: 0.5, delay:0.3}}>Sobre Mim</motion.h2>
+      <div className="md:grid md:grid-cols-2 xl:grid-cols-6 gap-10 items-center"
+      >
+        <motion.div className='xl:col-span-2'
+        initial={{opacity: 0, y:75}}
+        whileInView={{opacity: 1, y:0}}
+        transition={{ duration: 0.8, delay: 0.4 }}>
           <Image
             src="/hero-removebg.png"
             alt="Image hero"
-            width={500}
-            height={500}
+            width={400}
+            height={400}
             quality={100}
             loading="lazy"
+            className='shadow-sm rounded-lg'
           />
-        </div>
-        <div className="flex flex-col mt-5 md:place-self-center">
-          <p className="text-black dark:text-white text-lg lg:text-xl font-medium text-justify">
+        </motion.div>
+        <motion.div className="mt-8 md:mt-0 xl:col-span-4"
+        initial={{opacity: 0, y:75}}
+        whileInView={{opacity: 1, y:0}}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <p className="text-black dark:text-white text-lg lg:text-2xl xl:text-3xl font-medium text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
             accusantium dolorum officiis consequuntur repudiandae dolores
             dolore! Mollitia, dolorum minus voluptate fugiat tempore et
@@ -46,9 +54,9 @@ const SobreMim = () => {
             cupiditate voluptatem, rem fuga nostrum provident, recusandae
             tempore. Quidem, quo.
           </p>
-        </div>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   )
 }
 

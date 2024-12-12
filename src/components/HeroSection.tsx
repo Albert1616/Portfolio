@@ -52,12 +52,10 @@ const HeroSection = () => {
                             alt="personal hero image"
                             width={600}
                             height={500}
-                            className='w-full h-auto'
                         />
                     </div>
                 </motion.div>
             </div>
-            <h2 className='absolute -bottom-40 md:bottom-16 lg:bottom-0 left-1/2 translate-x-[-50%] text-black dark:text-white text-center text-xl md:text-2xl'>Sobre Mim</h2>
         </section>
     )
 }
