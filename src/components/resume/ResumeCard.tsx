@@ -15,7 +15,7 @@ const ResumeCard = ({ data, title, keyWord }: Props) => {
         className="flex items-center gap-2 text-black 
       dark:text-white text-lg font-light italic"
       >
-        <div className="rounded-full w-[5px] h-[5px] bg-primaryColor" />
+        <span className="rounded-full w-[5px] h-[5px] bg-primaryColor" />
         {keyWord}
       </p>
     </div>

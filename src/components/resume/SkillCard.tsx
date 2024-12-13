@@ -9,8 +9,8 @@ type Props = {
 const SkillCard = ({ icon: Icon, name }: Props) => {
   return (
     <div
-      className={`p-3 text-black dark:text-white flex items-center justify-center rounded-lg bg-gray-300 dark:bg-gray-600 shadow-md
-    hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-primaryColor dark:hover:text-primaryColor transition-colors
+      className={`p-3 text-black dark:text-white flex items-center justify-center border border-white rounded-s-xl bg-gray-200 dark:bg-gray-800 shadow-lg
+    hover:text-primaryColor dark:hover:text-primaryColor transition-colors 
     `}
     >
       <Icon size={30} />
@@ -19,3 +19,6 @@ const SkillCard = ({ icon: Icon, name }: Props) => {
 }
 
 export default SkillCard
+
+// hover:after:content-[]
+// after:relative after:bottom-8 after:right-7 hover:after:bg-white after:text-black after:rounded-lg after:p-3

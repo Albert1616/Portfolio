@@ -7,8 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 
 export const LINKS = [
   {
-    name: 'Sobre mim',
-    path: '#sobremim',
+    name: 'Resumo',
+    path: '#resumo',
   },
   {
     name: 'Skils',
