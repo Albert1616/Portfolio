@@ -3,6 +3,7 @@
 import DashBoardWrapper from '@/components/DashBoardWrapper'
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
+import Resume from '@/components/resume/Resume'
 import SobreMim from '@/components/SobreMim'
 import { useState } from 'react'
 
@@ -13,7 +14,8 @@ export default function Home() {
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <div className="px-6 md:px-12">
         <HeroSection />
-        <SobreMim />
+        {/* <SobreMim /> */}
+        <Resume />
       </div>
     </DashBoardWrapper>
   )
