@@ -22,7 +22,7 @@ type Props = {
 const TabScreen = ({ tab }: Props) => {
     return (
         <div className="col-span-2 p-3 md:p-5 mt-12 md:mt-0 bg-gray-300 dark:bg-slate-700 rounded-lg 
-        h-[25em] md:h-[20em] shadow-lg overflow-y-auto overflow-x-hidden">
+        h-[25em] shadow-lg overflow-y-auto overflow-x-hidden">
             <h2 className="md:mb-8 text-2xl text-center 
             font-semibold text-black dark:text-white"
             >

@@ -8,7 +8,7 @@ import { motion } from 'motion/react'
 
 const HeroSection = () => {
     return (
-        <section className=''>
+        <section className='min-h-[350px]'>
             <div className='grid grid-cols-1 md:grid-cols-12 pt-24 lg:py-32'>
                 <div className="flex flex-col md:items-start col-span-7 place-self-center">
                     <TextGenerateEffect words="Olá, eu sou Albert, desenvolvedor web" />

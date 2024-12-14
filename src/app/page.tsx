@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <DashBoardWrapper>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <div className="px-6 md:px-12">
+      <div className="px-6 md:px-12 flex flex-col gap-12">
         <HeroSection />
         {/* <SobreMim /> */}
         <Resume />
