@@ -3,6 +3,7 @@
 import DashBoardWrapper from '@/components/DashBoardWrapper'
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
+import Projects from '@/components/projects/Projects'
 import Resume from '@/components/resume/Resume'
 import SobreMim from '@/components/SobreMim'
 import { useState } from 'react'
@@ -16,6 +17,7 @@ export default function Home() {
         <HeroSection />
         {/* <SobreMim /> */}
         <Resume />
+        <Projects />
       </div>
     </DashBoardWrapper>
   )
