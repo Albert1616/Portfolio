@@ -31,20 +31,20 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
           transition={{ duration: 0.3, delay: 0.2, ease: 'linear' }}
         >
           <div className="flex gap-2 justify-end w-full">
-          <motion.button
-                onClick={() => handleViewMode()}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.4, delay: 0.5, ease: 'linear' }}
-                className="hover:text-purple-500"
-                >
-                    <motion.div
-                        whileHover={{ rotate: 360 }}  // Rotaciona o ícone em 180 graus ao passar o mouse
-                        transition={{ duration: 0.3 }}  // Define a duração da rotação
-                        >
-                        {isDarkMode ? <Sun size={25} /> : <Moon size={25} />}
-                    </motion.div>
-                </motion.button>
+            <motion.button
+              onClick={() => handleViewMode()}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.5, ease: 'linear' }}
+              className="hover:text-purple-500"
+            >
+              <motion.div
+                whileHover={{ rotate: 360 }} // Rotaciona o ícone em 180 graus ao passar o mouse
+                transition={{ duration: 0.3 }} // Define a duração da rotação
+              >
+                {isDarkMode ? <Sun size={25} /> : <Moon size={25} />}
+              </motion.div>
+            </motion.button>
 
             <motion.button
               onClick={() => setIsOpen(false)}
@@ -57,7 +57,7 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
             </motion.button>
           </div>
           <div className="flex flex-col gap-8 items-end mt-4">
-            <Nav isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+            <Nav />
           </div>
         </motion.div>
       ) : (

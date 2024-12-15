@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
-import { TextGenerateEffect } from './ui/text-generate-effect'
 import Image from 'next/image'
 import { FaLinkedin, FaGithub, FaDownload } from 'react-icons/fa'
 import Link from 'next/link'
 import { motion } from 'motion/react'
+import { TextGenerateEffect } from '../ui/text-generate-effect'
 
 const HeroSection = () => {
     return (

@@ -2,10 +2,10 @@
 'use client'
 import { Moon, Sun } from 'lucide-react'
 import { motion } from 'motion/react'
-import Link from 'next/link'
 import React from 'react'
 import NavMobile from './NavMobile'
 import Nav from './Nav'
+import Logo from '../Logo'
 
 interface headerProps {
     isDarkMode: boolean
@@ -26,18 +26,12 @@ const Header = ({ isDarkMode, setIsDarkMode }: headerProps) => {
         <div className="fixed mx-auto shadow-sm top-0 left-0 right-0 z-10 bg-gray-200 dark:bg-gray-800 bg-opacity-100 px-10 ">
             <div className='flex items-center justify-between py-8'>
                 {/* LOGO */}
+                <Logo />
 
-                <Link
-                    href="/"
-                    className="text-black dark:text-white text-[2.5em] md:text-[3em] font-semibold"
-                >
-                    ALBERT
-                    <span className="text-purple-500 ml-2">.</span>
-                </Link>
-
+                {/* NAV */}
                 <NavMobile isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
                 <div className="items-center gap-5 hidden lg:flex">
-                    <Nav isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+                    <Nav />
 
                     <div className="flex items-center justify-center text-black dark:text-white">
                         <motion.button

@@ -1,5 +1,11 @@
 import React from 'react'
 import { IconType } from 'react-icons'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 
 type Props = {
   icon: IconType
@@ -8,13 +14,22 @@ type Props = {
 
 const SkillCard = ({ icon: Icon, name }: Props) => {
   return (
-    <div
-      className={`p-3 text-black dark:text-white flex items-center justify-center border border-white rounded-s-xl bg-gray-200 dark:bg-gray-800 shadow-lg
-    hover:text-primaryColor dark:hover:text-primaryColor transition-colors 
-    `}
-    >
-      <Icon size={30} />
-    </div>
+    <TooltipProvider delayDuration={100}>
+      <Tooltip>
+        <TooltipTrigger>
+          <div
+            className={`py-4 text-black dark:text-white flex items-center justify-center border border-white rounded-xl bg-gray-200 dark:bg-gray-800 shadow-lg
+          hover:text-primaryColor dark:hover:text-primaryColor transition-colors
+          `}
+          >
+            <Icon className="text-5xl md:text-7xl" />
+          </div>
+        </TooltipTrigger>
+        <TooltipContent className="text-[15px] font-bold">
+          {name}
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   )
 }
 

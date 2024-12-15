@@ -9,6 +9,12 @@ import Link from 'next/link';
 import { TbBrandTypescript, TbBrandVite } from "react-icons/tb";
 import { SiStyledcomponents, SiSpring, SiPostgresql } from "react-icons/si";
 import { FaJava, FaReact } from "react-icons/fa";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 type Props = {
     title: string
@@ -86,19 +92,23 @@ const CardProject = ({ title, src, index, techs }: Props) => {
                             alt="thumbnail"
                         />
                     </CardItem>
-                    {/* <CardItem
-                        as="p"
-                        translateZ="60"
-                        className="text-neutral-500 text-[14px] font-medium max-w-sm md:max-h-[2.5em] mt-6 dark:text-neutral-300 overflow-y-auto"
-                    >
-                        {description}
-                    </CardItem> */}
                     <CardItem
                         as="p"
                         translateZ="60"
                         className="mt-2 w-full flex items-end justify-end gap-4"
                     >
-                        {techs.map((tech, index) => IconTech(tech, index))}
+                        {techs.map((tech, index) => (
+                            <TooltipProvider key={index} delayDuration={100}>
+                                <Tooltip>
+                                    <TooltipTrigger>
+                                        {IconTech(tech, index)}
+                                    </TooltipTrigger>
+                                    <TooltipContent className='font-bold'>
+                                        {tech}
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
+                        ))}
                     </CardItem>
                 </CardBody>
             </CardContainer>

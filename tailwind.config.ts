@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable prettier/prettier */
 import type { Config } from 'tailwindcss'
 
 export default {
@@ -10,7 +12,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primaryColor:'#a855f7',
+				primaryColor: '#a855f7',
 				backgroundColor: '#e5e7eb',
 				darkBackgroundColor: '#1f2937',
 				background: 'hsl(var(--background))',
@@ -54,6 +56,9 @@ export default {
 					'5': 'hsl(var(--chart-5))',
 				},
 			},
+			backgroundImage: {
+				'gradient-button': 'bg-gradient-to-r from-rose-300 to-violet-500'
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -62,11 +67,11 @@ export default {
 			keyframes: {
 				darkMode: {
 					'0%': {
-						backgroundColor: 'white'
+						backgroundColor: 'white',
 					},
 					'100%': {
-						backgroundColor: 'gray'
-					}
+						backgroundColor: 'gray',
+					},
 				},
 				menu: {
 					'0%': {
@@ -88,7 +93,7 @@ export default {
 			animation: {
 				'menu-open': 'menu 0.4s linear',
 				'menu-close': 'menuClose 0.2s ease',
-				'dark-mode': 'darkMode 0.2s easeIn'
+				'dark-mode': 'darkMode 0.2s easeIn',
 			},
 		},
 	},
