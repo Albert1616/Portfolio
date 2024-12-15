@@ -9,7 +9,7 @@ import TitleSection from '../TitleSection'
 const Resume = () => {
   const [tab, setTab] = useState('Experiencia')
   return (
-    <section className="pt-28" id="resumo">
+    <section className="pt-14 md:pt-28" id="resumo">
       <TitleSection title="Resumo" />
       <motion.div
         className="md:grid md:grid-cols-3 md:gap-8 mt-8 items-center"
