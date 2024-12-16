@@ -15,16 +15,16 @@ const Contato = () => {
             <div className='mt-8'>
                 <div className='grid grid-cols-1 md:grid-cols-5 md:gap-12'>
                     <div className='md:col-span-3'>
-                        <div className='flex flex-col items-center justify-center'>
-                            <h2 className='text-black font-bold text-2xl'>Vamos trabalhar juntos!</h2>
-                            <p className='text-black text-lg'>Envie-me um email</p>
+                        <div className='flex flex-col items-center justify-center text-black dark:text-white'>
+                            <h2 className='font-bold text-2xl'>Vamos trabalhar juntos!</h2>
+                            <p className='text-lg'>Envie-me um email</p>
                         </div>
 
                         <form action="" className='flex flex-col gap-y-4 mt-5'>
                             <InputContato placeholder='Seu email' />
                             <InputContato placeholder='Seu nome' />
                             <InputContato placeholder='Assunto' />
-                            <Textarea placeholder='Messagem...' className='border border-black md:text-lg' />
+                            <Textarea placeholder='Messagem...' className='border border-black dark:border-white focus:outline-none focus:border-none md:text-lg' />
                             <button type='submit' className='p-2 text-2xl font-extrabold rounded-lg bg-gradient-to-r from-red-400 to-violet-500'>Enviar</button>
                         </form>
                     </div>

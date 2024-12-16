@@ -1,7 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
 import Image from 'next/image'
-import { FaLinkedin, FaGithub, FaDownload } from 'react-icons/fa'
+import { FaDownload } from 'react-icons/fa'
+import { SlSocialLinkedin } from "react-icons/sl";
+import { FiGithub } from "react-icons/fi";
 import Link from 'next/link'
 import { motion } from 'motion/react'
 import { TextGenerateEffect } from '../ui/text-generate-effect'
@@ -14,21 +16,23 @@ const HeroSection = () => {
                     <TextGenerateEffect words="Olá, eu sou Albert, desenvolvedor web" />
                     <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 mt-4 md:mt-10">
                         <motion.div
-                            className="flex items-center gap-4"
+                            className="flex items-center gap-2"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 1.6 }}
                         >
-                            <Link href="">
-                                <FaLinkedin
-                                    className="text-primaryColor hover:scale-125 ease-in-out duration-200"
-                                    size={35}
+                            <Link href="" className='rounded-full p-3 border border-primaryColor
+                            hover:scale-125 ease-in-out duration-200 hover:bg-primaryColor group'>
+                                <SlSocialLinkedin
+                                    className="text-2xl md:text-3xl text-primaryColor group-hover:text-white"
+
                                 />
                             </Link>
-                            <Link href="">
-                                <FaGithub
-                                    className="text-primaryColor hover:scale-125 ease-in-out duration-200"
-                                    size={35}
+                            <Link href="" className='rounded-full p-3 border border-primaryColor
+                            hover:scale-125 ease-in-out duration-200 hover:bg-primaryColor group'>
+                                <FiGithub
+                                    className="text-2xl md:text-3xl text-primaryColor group-hover:text-white"
+
                                 />
                             </Link>
                         </motion.div>

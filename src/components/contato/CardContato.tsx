@@ -21,7 +21,7 @@ const CardContato = ({ contato, icon: Icon }: Props) => {
     return (
         <div className="flex flex-col mt-3">
             <div
-                className="bg-[#eec7c7] p-2 text-black text-lg 
+                className="bg-[#f1c0c0] p-2 text-black text-lg 
                         rounded-lg flex items-center gap-3 justify-center md:justify-between flex-wrap bg-gradient-to-t"
             >
                 <p className="flex items-center justify-center gap-3 flex-wrap max-w-full">
@@ -32,7 +32,7 @@ const CardContato = ({ contato, icon: Icon }: Props) => {
                         <TooltipTrigger onClick={() => copyEmail(contato)}>
                             <MdContentCopy className='text-lg md:text-xl' />
                         </TooltipTrigger>
-                        <TooltipContent className="">
+                        <TooltipContent className="text-black dark:text-white font-bold">
                             <p>Copiar</p>
                         </TooltipContent>
                     </Tooltip>

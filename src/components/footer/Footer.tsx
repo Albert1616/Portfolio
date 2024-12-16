@@ -25,7 +25,7 @@ const Footer = () => {
                     </Link>
                 </div>
             </div>
-            <div className='absolute bottom-0 w-full bg-gray-400 text-white flex items-center justify-center'>
+            <div className='absolute bottom-0 w-full text-black dark:text-white flex items-center justify-center'>
                 <p className='flex items-center justify-center gap-1'><BiCopyright /> Todos os diretios reservados.</p>
             </div>
         </section>

@@ -57,7 +57,7 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
             </motion.button>
           </div>
           <div className="flex flex-col gap-8 items-end mt-4">
-            <Nav />
+            <Nav close={setIsOpen} />
           </div>
         </motion.div>
       ) : (

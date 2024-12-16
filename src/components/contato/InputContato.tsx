@@ -10,7 +10,7 @@ const InputContato = ({ placeholder }: Props) => {
     return (
         <Input
             placeholder={placeholder}
-            className="border border-black focus:outline-none focus:border-black
+            className="border border-black dark:border-white focus:outline-none focus:border-none
                 md:text-lg md:py-2"
         />
     )
