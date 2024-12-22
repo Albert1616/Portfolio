@@ -21,7 +21,7 @@ const CardContato = ({ contato, icon: Icon }: Props) => {
     return (
         <div className="flex flex-col mt-3">
             <div
-                className="bg-[#f1c0c0] p-2 text-black text-lg 
+                className="bg-roseBackground p-2 text-black text-lg 
                         rounded-lg flex items-center gap-3 justify-center md:justify-between flex-wrap bg-gradient-to-t"
             >
                 <p className="flex items-center justify-center gap-3 flex-wrap max-w-full">
@@ -29,10 +29,10 @@ const CardContato = ({ contato, icon: Icon }: Props) => {
                 </p>
                 <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                        <TooltipTrigger onClick={() => copyEmail(contato)}>
+                        <TooltipTrigger onClick={() => copyEmail(contato)} aria-label="Texto que informa a finalizade do botão, que seria copiar um texto.">
                             <MdContentCopy className='text-lg md:text-xl' />
                         </TooltipTrigger>
-                        <TooltipContent className="text-black dark:text-white font-bold">
+                        <TooltipContent className="text-black dark:text-white font-bold" aria-label="Botão para copiar o contato informado no card.">
                             <p>Copiar</p>
                         </TooltipContent>
                     </Tooltip>

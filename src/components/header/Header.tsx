@@ -31,7 +31,7 @@ const Header = ({ isDarkMode, setIsDarkMode }: headerProps) => {
                 {/* NAV */}
                 <NavMobile isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
                 <div className="items-center gap-5 hidden lg:flex">
-                    <Nav />
+                    <Nav close={setIsDarkMode} />
 
                     <div className="flex items-center justify-center text-black dark:text-white">
                         <motion.button
@@ -40,6 +40,7 @@ const Header = ({ isDarkMode, setIsDarkMode }: headerProps) => {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.4, delay: 0.5, ease: 'linear' }}
                             className="hover:text-purple-500"
+                            aria-label="Botão para alterar tema do site"
                         >
                             <motion.div
                                 whileHover={{ rotate: 360 }}  // Rotaciona o ícone em 180 graus ao passar o mouse

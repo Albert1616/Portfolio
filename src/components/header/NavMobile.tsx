@@ -52,6 +52,7 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.5, ease: 'linear' }}
               className="hover:text-purple-500"
+              aria-label="Botão para fechar o menu mobile"
             >
               <X size={25} />
             </motion.button>
@@ -61,7 +62,10 @@ const NavMobile = ({ isDarkMode, setIsDarkMode }: navMobileProps) => {
           </div>
         </motion.div>
       ) : (
-        <button onClick={() => setIsOpen(true)}>
+        <button
+          onClick={() => setIsOpen(true)}
+          aria-label="Botão para abrir menu mobile"
+        >
           <Menu size={30} className="text-black dark:text-white" />
         </button>
       )}

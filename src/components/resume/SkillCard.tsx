@@ -25,7 +25,10 @@ const SkillCard = ({ icon: Icon, name }: Props) => {
             <Icon className="text-5xl md:text-7xl" />
           </div>
         </TooltipTrigger>
-        <TooltipContent className="text-[15px] font-bold">
+        <TooltipContent
+          className="text-[15px] font-bold"
+          aria-label="Botão para ilustrar uma skill."
+        >
           {name}
         </TooltipContent>
       </Tooltip>

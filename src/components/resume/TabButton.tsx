@@ -16,6 +16,7 @@ const TabButton = ({ tab, setTab, icon: Icon, active }: Props) => {
       bg-transparent border border-primaryColor hover:bg-gradient-to-r hover:from-rose-300 hover:to-violet-500 hover:text-white ${active === tab ? 'bg-gradient-to-r from-rose-300 to-violet-500 text-white' : ''} 
       transition-colors duration-500 delay-150 text-xl font-semibold text-black dark:text-white`}
       onClick={() => setTab(tab)}
+      aria-label="Botão para filtrar os projetos pelo tipo."
     >
       <motion.span whileHover={{ y: -15 }}>{tab}</motion.span>
       <motion.span whileHover={{ y: -15 }}>

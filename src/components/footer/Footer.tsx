@@ -11,13 +11,13 @@ const Footer = () => {
             <div className="flex items-center justify-between py-7">
                 <Logo />
                 <div className='flex items-center justify-center gap-1'>
-                    <Link href="">
+                    <Link href="" aria-label="Botão para navegar até o Linkedin">
                         <FaLinkedin
                             className="text-primaryColor hover:scale-125 ease-in-out duration-200"
                             size={35}
                         />
                     </Link>
-                    <Link href="">
+                    <Link href="" aria-label="Botão para navegar até o GitHub">
                         <FaGithub
                             className="text-primaryColor hover:scale-125 ease-in-out duration-200"
                             size={35}

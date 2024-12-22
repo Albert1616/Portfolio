@@ -86,8 +86,9 @@ const CardProject = ({ title, src, index, techs }: Props) => {
 
                         <Image
                             src={src}
-                            height={1000}
-                            width={1000}
+                            loading='lazy'
+                            width={500}
+                            height={500}
                             className="h-full w-full object-cover rounded-xl group-hover/card:shadow-xl"
                             alt="thumbnail"
                         />
@@ -100,10 +101,10 @@ const CardProject = ({ title, src, index, techs }: Props) => {
                         {techs.map((tech, index) => (
                             <TooltipProvider key={index} delayDuration={100}>
                                 <Tooltip>
-                                    <TooltipTrigger>
+                                    <TooltipTrigger aria-label="Nome da tecnologia utilizada no projeto.">
                                         {IconTech(tech, index)}
                                     </TooltipTrigger>
-                                    <TooltipContent className='font-bold'>
+                                    <TooltipContent className='font-bold' aria-label='Botão para ilustrar as tecnlogias do projeto.'>
                                         {tech}
                                     </TooltipContent>
                                 </Tooltip>

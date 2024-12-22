@@ -15,6 +15,9 @@ export default {
 				primaryColor: '#a855f7',
 				backgroundColor: '#e5e7eb',
 				darkBackgroundColor: '#1f2937',
+				roseBackground: '#f1c0c0',
+				violetColor: '#4E0250',
+				lightVioletColor: '#D6B4FC',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {

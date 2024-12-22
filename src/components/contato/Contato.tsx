@@ -33,6 +33,7 @@ const Contato = () => {
                             src='/contato-imagem.png'
                             width={200}
                             height={250}
+                            loading='lazy'
                             alt='Imagem animada que ilustra a sessão de contato'
                             className='place-self-center h-full hidden md:block' />
                         <div>
