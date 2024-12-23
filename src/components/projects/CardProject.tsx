@@ -6,8 +6,7 @@ import { IoCodeSlash } from "react-icons/io5";
 import { motion, useInView } from 'motion/react';
 import Image from 'next/image'
 import Link from 'next/link';
-import { TbBrandTypescript, TbBrandVite } from "react-icons/tb";
-import { SiStyledcomponents, SiSpring, SiPostgresql } from "react-icons/si";
+import { SiStyledcomponents, SiSpring, SiPostgresql, SiTypescript, SiVite } from "react-icons/si";
 import { FaJava, FaReact } from "react-icons/fa";
 import {
     Tooltip,
@@ -37,11 +36,11 @@ const CardProject = ({ title, src, index, techs }: Props) => {
         const style = "p-1 size={35} text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor"
         switch (tech) {
             case "Typescript":
-                return <TbBrandTypescript className={`${style} text-black`} key={index} size={35} />;
+                return <SiTypescript className={`${style} text-black`} key={index} size={35} />;
             case "React.js":
                 return <FaReact className={`${style}`} key={index} size={35} />;
             case "Vite.js":
-                return <TbBrandVite className={`${style}`} key={index} size={35} />;
+                return <SiVite className={`${style}`} key={index} size={35} />;
             case "Styled-components":
                 return <SiStyledcomponents className={`${style}`} key={index} size={35} />;
             case "Java":
@@ -63,8 +62,8 @@ const CardProject = ({ title, src, index, techs }: Props) => {
             transition={{ duration: 0.7, delay: index * 0.4 }}>
             <CardContainer className="inter-var ">
                 <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] 
-                dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] 
-                h-auto rounded-xl p-6 border  ">
+                    dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] 
+                    h-auto rounded-xl p-6 border  ">
                     <CardItem
                         translateZ="50"
                         className="text-2xl font-extrabold text-neutral-600 dark:text-white flex items-center justify-center w-full"
@@ -73,14 +72,14 @@ const CardProject = ({ title, src, index, techs }: Props) => {
                     </CardItem>
                     <CardItem translateZ="100" className="w-full mt-6 h-[25em] group">
                         <div className='absolute items-center justify-center gap-5 w-full h-full inset-0 bg-black opacity-0 hidden group-hover:opacity-70
-                        group-hover:flex transition-opacity duration-500'>
+                            group-hover:flex transition-opacity duration-500'>
                             <Link href="/">
                                 <FiEye size={40} className='cursor-pointer rounded-full border border-gray-500 p-2 
-                                hover:border-white text-gray-500 hover:text-white' />
+                                    hover:border-white text-gray-500 hover:text-white' />
                             </Link>
                             <Link href='/'>
                                 <IoCodeSlash size={40} className='cursor-pointer rounded-full border border-gray-500 p-2 
-                                hover:border-white text-gray-500 hover:text-white' />
+                                    hover:border-white text-gray-500 hover:text-white' />
                             </Link>
                         </div>
 

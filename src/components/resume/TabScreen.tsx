@@ -11,7 +11,7 @@ import {
     RiGithubFill,
     RiTailwindCssFill
 } from 'react-icons/ri'
-import { TbBrandTypescript } from "react-icons/tb";
+import { BiLogoTypescript } from "react-icons/bi";
 import SkillCard from './SkillCard'
 import { AnimatePresence, motion } from 'motion/react'
 
@@ -70,7 +70,7 @@ const TabScreen = ({ tab }: Props) => {
                         <div className="mt-2 px-3 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                             <SkillCard icon={RiHtml5Fill} name="HTML5" />
                             <SkillCard icon={RiCss3Fill} name="CSS3" />
-                            <SkillCard icon={TbBrandTypescript} name="Typescript" />
+                            <SkillCard icon={BiLogoTypescript} name="Typescript" />
                             <SkillCard icon={RiReactjsFill} name="React.js" />
                             <SkillCard icon={RiNextjsFill} name="Next.js" />
                             <SkillCard icon={RiTailwindCssFill} name="Tailwindcss" />

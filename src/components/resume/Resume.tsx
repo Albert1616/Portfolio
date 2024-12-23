@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { motion } from 'motion/react'
 import TabButton from './TabButton'
-import { MdOutlineWork, MdBook, MdSchool } from 'react-icons/md'
-import { GiBrain } from 'react-icons/gi'
+import {
+  FaBrain,
+  FaBriefcase,
+  FaBookOpen,
+  FaGraduationCap,
+} from 'react-icons/fa'
 import TabScreen from './TabScreen'
 import TitleSection from '../TitleSection'
 
@@ -20,20 +24,20 @@ const Resume = () => {
         <div className="col-span-1 flex flex-col items-center md:justify-between md:h-[20em] gap-3 w-full">
           <TabButton
             tab="Sobre mim"
-            icon={MdBook}
+            icon={FaBookOpen}
             setTab={setTab}
             active={tab}
           />
           <TabButton
             tab="Experiencia"
-            icon={MdOutlineWork}
+            icon={FaBriefcase}
             setTab={setTab}
             active={tab}
           />
-          <TabButton tab="Skills" icon={GiBrain} setTab={setTab} active={tab} />
+          <TabButton tab="Skills" icon={FaBrain} setTab={setTab} active={tab} />
           <TabButton
             tab="Escolaridade"
-            icon={MdSchool}
+            icon={FaGraduationCap}
             setTab={setTab}
             active={tab}
           />

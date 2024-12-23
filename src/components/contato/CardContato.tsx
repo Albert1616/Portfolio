@@ -7,7 +7,7 @@ import {
 } from '@radix-ui/react-tooltip'
 import React from 'react'
 import { IconType } from 'react-icons'
-import { MdContentCopy } from 'react-icons/md'
+import { IoCopyOutline } from "react-icons/io5";
 
 type Props = {
     contato: string
@@ -30,7 +30,7 @@ const CardContato = ({ contato, icon: Icon }: Props) => {
                 <TooltipProvider delayDuration={100}>
                     <Tooltip>
                         <TooltipTrigger onClick={() => copyEmail(contato)} aria-label="Texto que informa a finalizade do botão, que seria copiar um texto.">
-                            <MdContentCopy className='text-lg md:text-xl' />
+                            <IoCopyOutline className='text-lg md:text-xl' />
                         </TooltipTrigger>
                         <TooltipContent className="text-black dark:text-white font-bold" aria-label="Botão para copiar o contato informado no card.">
                             <p>Copiar</p>

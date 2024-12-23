@@ -3,7 +3,7 @@ import React from 'react'
 import TitleSection from '../TitleSection'
 import Image from 'next/image';
 import { Textarea } from '../ui/textarea'
-import { MdEmail, MdWhatsapp } from "react-icons/md";
+import { FaEnvelopeOpen, FaWhatsapp } from 'react-icons/fa'
 import CardContato from './CardContato';
 import InputContato from './InputContato';
 
@@ -35,10 +35,10 @@ const Contato = () => {
                             height={250}
                             loading='lazy'
                             alt='Imagem animada que ilustra a sessão de contato'
-                            className='place-self-center h-full hidden md:block' />
+                            className='place-self-center h-full w-auto hidden md:block' />
                         <div>
-                            <CardContato contato='Matheusal2018@outlook.com' icon={MdEmail} />
-                            <CardContato contato='+55 (84) 98754-8540' icon={MdWhatsapp} />
+                            <CardContato contato='Matheusal2018@outlook.com' icon={FaEnvelopeOpen} />
+                            <CardContato contato='+55 (84) 98754-8540' icon={FaWhatsapp} />
                         </div>
                     </div>
                 </div>
