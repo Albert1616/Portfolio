@@ -19,9 +19,9 @@ const CardContato = ({ contato, icon: Icon }: Props) => {
         navigator.clipboard.writeText(contato);
     }
     return (
-        <div className="flex flex-col mt-3">
+        <div className="mt-3">
             <div
-                className="bg-roseBackground p-2 text-black text-lg 
+                className="bg-roseBackground p-2 text-black 
                         rounded-lg flex items-center gap-3 justify-center md:justify-between flex-wrap bg-gradient-to-t"
             >
                 <p className="flex items-center justify-center gap-3 flex-wrap max-w-full">

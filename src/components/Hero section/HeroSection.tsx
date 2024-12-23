@@ -11,8 +11,8 @@ import { TextGenerateEffect } from '../ui/text-generate-effect'
 const HeroSection = () => {
     return (
         <section className='min-h-[350px]'>
-            <div className='grid grid-cols-1 md:grid-cols-12 pt-24 lg:py-32'>
-                <div className="flex flex-col md:items-start col-span-7 place-self-center">
+            <div className='grid grid-cols-1 lg:grid-cols-12 pt-24 lg:py-32'>
+                <div className="flex flex-col lg:items-start col-span-7 place-self-center">
                     <TextGenerateEffect words="Olá, eu sou Albert, desenvolvedor web" />
                     <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 mt-4 md:mt-10">
                         <LazyMotion features={domMin}>
@@ -62,6 +62,7 @@ const HeroSection = () => {
                             width={1200}
                             height={1600}
                             priority
+                            sizes=''
                         />
                     </div>
                 </div>

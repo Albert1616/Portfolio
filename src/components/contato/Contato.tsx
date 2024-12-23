@@ -13,7 +13,7 @@ const Contato = () => {
         <section className="pt-8 md:pt-24" id='contato'>
             <TitleSection title="Contato" />
             <div className='mt-8'>
-                <div className='grid grid-cols-1 md:grid-cols-5 md:gap-12'>
+                <div className='grid grid-cols-1 lg:grid-cols-5 lg:gap-12'>
                     <div className='md:col-span-3'>
                         <div className='flex flex-col items-center justify-center text-black dark:text-white'>
                             <h2 className='font-bold text-2xl'>Vamos trabalhar juntos!</h2>
@@ -28,14 +28,14 @@ const Contato = () => {
                             <button type='submit' className='p-2 text-2xl font-extrabold rounded-lg bg-gradient-to-r from-red-400 to-violet-500'>Enviar</button>
                         </form>
                     </div>
-                    <div className='md:col-span-2 flex flex-col justify-between'>
+                    <div className='lg:col-span-2 w-full flex flex-col justify-between'>
                         <Image
                             src='/contato-imagem.png'
                             width={200}
                             height={250}
                             loading='lazy'
                             alt='Imagem animada que ilustra a sessão de contato'
-                            className='place-self-center h-full w-auto hidden md:block' />
+                            className='place-self-center h-full hidden lg:block' />
                         <div>
                             <CardContato contato='Matheusal2018@outlook.com' icon={FaEnvelopeOpen} />
                             <CardContato contato='+55 (84) 98754-8540' icon={FaWhatsapp} />
