@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { ESCOLARIDADE, EXPERIENCIA } from '@/lib/utils'
+import { ESCOLARIDADE, EXPERIENCIA, SKILLS } from '@/lib/utils'
 import React from 'react'
 import ResumeCard from './ResumeCard'
 import {
@@ -37,11 +37,17 @@ const TabScreen = ({ tab }: Props) => {
                 >
                     {tab === 'Sobre mim' ? (
                         <div className="flex flex-col gap-4 mt-4 px-2">
-                            <p className="text-xl font-medium text-justify text-black dark:text-white">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Incidunt consequuntur, veniam impedit numquam rem praesentium
-                                soluta dolor eaque atque amet nesciunt nulla. Libero dolores
-                                porro excepturi accusantium praesentium ea iste.
+                            <p className="text-2xl font-medium text-justify text-black dark:text-white">
+                            Meu nome é Matheus, tenho 22 anos, sou desenvolvedor e estudante de TI.
+                            Meu primeiro contato com a área aconteceu em 2018, quando iniciei meus estudos
+                            no curso técnico em Informática para Internet no IFRN. Após finalizar o ensino médio, 
+                            decidi continuar estudando tecnologia e desenvolvimento. Logo, em 2022, 
+                            ingressei na UFRN para cursar Bacharelado em Tecnologia da Informação,
+                            no qual estou no 6º período, com previsão de conclusão para 2026.
+                            Durante meus estudos, tive a oportunidade de conhecer muitas linguagens de desenvolvimento, 
+                            tanto para web quanto para mobile, abrangendo as áreas de front-end e back-end. 
+                            Atualmente, estou focando meus estudos no desenvolvimento de aplicações com Next.js, 
+                            TypeScript, Node.js e PostgreSQL.
                             </p>
                         </div>
                     ) : tab === 'Experiencia' ? (
@@ -68,14 +74,9 @@ const TabScreen = ({ tab }: Props) => {
                         </div>
                     ) : tab === 'Skills' ? (
                         <div className="mt-2 px-3 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                            <SkillCard icon={RiHtml5Fill} name="HTML5" />
-                            <SkillCard icon={RiCss3Fill} name="CSS3" />
-                            <SkillCard icon={BiLogoTypescript} name="Typescript" />
-                            <SkillCard icon={RiReactjsFill} name="React.js" />
-                            <SkillCard icon={RiNextjsFill} name="Next.js" />
-                            <SkillCard icon={RiTailwindCssFill} name="Tailwindcss" />
-                            <SkillCard icon={RiNodejsFill} name="Node.js" />
-                            <SkillCard icon={RiGithubFill} name="Github" />
+                            {SKILLS.map((skill) => (
+                                <SkillCard name={skill.tech} icon={skill.icon} key={skill.tech}/>
+                            ))}
                         </div>
                     ) : null}
                 </motion.div>
@@ -83,5 +84,4 @@ const TabScreen = ({ tab }: Props) => {
         </div>
     )
 }
-
 export default TabScreen

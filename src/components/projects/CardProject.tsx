@@ -6,7 +6,7 @@ import { IoCodeSlash } from "react-icons/io5";
 import { motion, useInView } from 'motion/react';
 import Image from 'next/image'
 import Link from 'next/link';
-import { SiStyledcomponents, SiSpring, SiPostgresql, SiTypescript, SiVite } from "react-icons/si";
+import { SiStyledcomponents, SiSpring, SiPostgresql, SiTypescript, SiVite, SiNodedotjs,SiNextdotjs} from "react-icons/si";
 import { FaJava, FaReact } from "react-icons/fa";
 import {
     Tooltip,
@@ -18,12 +18,14 @@ import {
 type Props = {
     title: string
     description: string
-    src: string
+    src:string
+    repository: string
     index: number,
-    techs: string[]
+    techs: string[],
+    tags: string[]
 }
 
-const CardProject = ({ title, src, index, techs }: Props) => {
+const CardProject = ({ title,src, repository, index, techs, tags }: Props) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true })
 
@@ -49,6 +51,10 @@ const CardProject = ({ title, src, index, techs }: Props) => {
                 return <SiSpring className={`${style}`} key={index} size={35} />;
             case "Postgres":
                 return <SiPostgresql className={`${style}`} key={index} size={35} />;
+            case "Next.js":
+                return <SiNextdotjs className={`${style}`} key={index} size={35} />;
+            case "Node.js":
+                return <SiNodedotjs className={`${style}`} key={index} size={35} />;
             default:
                 return null;
         }
@@ -73,11 +79,13 @@ const CardProject = ({ title, src, index, techs }: Props) => {
                     <CardItem translateZ="100" className="w-full mt-6 h-[25em] group">
                         <div className='absolute items-center justify-center gap-5 w-full h-full inset-0 bg-black opacity-0 hidden group-hover:opacity-70
                             group-hover:flex transition-opacity duration-500'>
-                            <Link href="/">
-                                <FiEye size={40} className='cursor-pointer rounded-full border border-gray-500 p-2 
-                                    hover:border-white text-gray-500 hover:text-white' />
-                            </Link>
-                            <Link href='/'>
+                            {tags.includes('Web')&&(
+                                <Link href="/">
+                                    <FiEye size={40} className='cursor-pointer rounded-full border border-gray-500 p-2 
+                                        hover:border-white text-gray-500 hover:text-white' />
+                                </Link>
+                            )}
+                            <Link href={repository}>
                                 <IoCodeSlash size={40} className='cursor-pointer rounded-full border border-gray-500 p-2 
                                     hover:border-white text-gray-500 hover:text-white' />
                             </Link>
