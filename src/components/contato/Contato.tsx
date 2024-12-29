@@ -24,18 +24,18 @@ const Contato = () => {
                             <InputContato placeholder='Seu email' />
                             <InputContato placeholder='Seu nome' />
                             <InputContato placeholder='Assunto' />
-                            <Textarea placeholder='Messagem...' className='border border-black dark:border-white focus:outline-none focus:border-none md:text-lg' />
+                            <Textarea placeholder='Messagem...' className='h-[80px] min-h-[80px] max-h-[80px] text-black dark:text-white border border-black dark:border-white focus:outline-none focus:border-none md:text-lg' />
                             <button type='submit' className='p-2 text-2xl font-extrabold rounded-lg bg-gradient-to-r from-red-400 to-violet-500'>Enviar</button>
                         </form>
                     </div>
                     <div className='lg:col-span-2 w-full flex flex-col justify-between'>
                         <Image
-                            src='/contato-imagem.png'
+                            src='/contato-imagem.webp'
                             width={200}
                             height={250}
                             loading='lazy'
                             alt='Imagem animada que ilustra a sessão de contato'
-                            className='place-self-center h-full hidden lg:block' />
+                            className='select-none place-self-center h-full hidden lg:block' />
                         <div>
                             <CardContato contato='Matheusal2018@outlook.com' icon={FaEnvelopeOpen} />
                             <CardContato contato='+55 (84) 98754-8540' icon={FaWhatsapp} />

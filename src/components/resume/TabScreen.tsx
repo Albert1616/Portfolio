@@ -2,16 +2,6 @@
 import { ESCOLARIDADE, EXPERIENCIA, SKILLS } from '@/lib/utils'
 import React from 'react'
 import ResumeCard from './ResumeCard'
-import {
-    RiNextjsFill,
-    RiReactjsFill,
-    RiNodejsFill,
-    RiHtml5Fill,
-    RiCss3Fill,
-    RiGithubFill,
-    RiTailwindCssFill
-} from 'react-icons/ri'
-import { BiLogoTypescript } from "react-icons/bi";
 import SkillCard from './SkillCard'
 import { AnimatePresence, motion } from 'motion/react'
 
@@ -38,16 +28,16 @@ const TabScreen = ({ tab }: Props) => {
                     {tab === 'Sobre mim' ? (
                         <div className="flex flex-col gap-4 mt-4 px-2">
                             <p className="text-2xl font-medium text-justify text-black dark:text-white">
-                            Meu nome é Matheus, tenho 22 anos, sou desenvolvedor e estudante de TI.
-                            Meu primeiro contato com a área aconteceu em 2018, quando iniciei meus estudos
-                            no curso técnico em Informática para Internet no IFRN. Após finalizar o ensino médio, 
-                            decidi continuar estudando tecnologia e desenvolvimento. Logo, em 2022, 
-                            ingressei na UFRN para cursar Bacharelado em Tecnologia da Informação,
-                            no qual estou no 6º período, com previsão de conclusão para 2026.
-                            Durante meus estudos, tive a oportunidade de conhecer muitas linguagens de desenvolvimento, 
-                            tanto para web quanto para mobile, abrangendo as áreas de front-end e back-end. 
-                            Atualmente, estou focando meus estudos no desenvolvimento de aplicações com Next.js, 
-                            TypeScript, Node.js e PostgreSQL.
+                                Meu nome é Matheus, tenho 22 anos, sou desenvolvedor e estudante de TI.
+                                Meu primeiro contato com a área aconteceu em 2018, quando iniciei meus estudos
+                                no curso técnico em Informática para Internet no IFRN. Após finalizar o ensino médio,
+                                decidi continuar estudando tecnologia e desenvolvimento. Logo, em 2022,
+                                ingressei na UFRN para cursar Bacharelado em Tecnologia da Informação,
+                                no qual estou no 6º período, com previsão de conclusão para 2026.
+                                Durante meus estudos, tive a oportunidade de conhecer muitas linguagens de desenvolvimento,
+                                tanto para web quanto para mobile, abrangendo as áreas de front-end e back-end.
+                                Atualmente, estou focando meus estudos no desenvolvimento de aplicações com Next.js,
+                                TypeScript, Node.js e PostgreSQL.
                             </p>
                         </div>
                     ) : tab === 'Experiencia' ? (
@@ -75,7 +65,7 @@ const TabScreen = ({ tab }: Props) => {
                     ) : tab === 'Skills' ? (
                         <div className="mt-2 px-3 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                             {SKILLS.map((skill) => (
-                                <SkillCard name={skill.tech} icon={skill.icon} key={skill.tech}/>
+                                <SkillCard name={skill.tech} icon={skill.icon} key={skill.tech} />
                             ))}
                         </div>
                     ) : null}

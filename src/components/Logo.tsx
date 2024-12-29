@@ -6,7 +6,7 @@ const Logo = () => {
     return (
         <Link
             href="/"
-            className="text-black dark:text-white text-[2.5em] md:text-[3em] font-semibold"
+            className="text-black dark:text-white select-none text-[2.5em] md:text-[3em] font-semibold"
         >
             ALBERT
             <span className="text-purple-500 ml-2">.</span>

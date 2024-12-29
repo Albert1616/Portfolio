@@ -20,49 +20,44 @@ const HeroSection = () => {
                                 className="flex items-center gap-2"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-
                             >
-                                <Link href="" className='rounded-full p-3 border border-primaryColor
+                                <Link href="https://www.linkedin.com/in/matheus-ara%C3%BAjotec/" target='_blank' className='rounded-full p-3 border border-primaryColor
                                         hover:scale-125 ease-in-out duration-200 hover:bg-primaryColor group'
                                     aria-label="Botão para navegar até o Linkedin.">
                                     <SlSocialLinkedin
                                         className="text-2xl md:text-3xl text-primaryColor group-hover:text-white"
-
                                     />
                                 </Link>
-                                <Link href="" className='rounded-full p-3 border border-primaryColor
+                                <Link href="https://github.com/Albert1616" target='_blank' className='rounded-full p-3 border border-primaryColor
                                         hover:scale-125 ease-in-out duration-200 hover:bg-primaryColor group'
                                     aria-label="Botão para navegar até o GitHub.">
                                     <FiGithub
                                         className="text-2xl md:text-3xl text-primaryColor group-hover:text-white"
-
                                     />
                                 </Link>
                             </motion.div>
+                            <motion.button
+                                className="w-3/4 md:w-64 text-xl font-semibold flex items-center 
+                            justify-center gap-3 bg-primaryColor text-black rounded-lg py-2 md:p-4
+                            hover:bg-[#8B2EE2] transition-colors duration-75"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                            >
+                                Baixar CV <FaDownload size={15} />
+                            </motion.button>
                         </LazyMotion>
-                        <motion.button
-                            className="w-3/4 md:w-64 text-xl font-semibold flex items-center 
-                                justify-center gap-3 bg-primaryColor text-black rounded-lg py-2 md:p-4
-                                hover:bg-[#8B2EE2] transition-colors duration-75"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-
-                        >
-                            Baixar CV <FaDownload size={15} />
-                        </motion.button>
-
                     </div>
                 </div>
-
                 <div className="col-span-5 place-self-center pb-12 md:pb-0">
                     <div className='w-[300px] h-[300px] lg:w-[400px] lg:h-[350px] mt-6 lg:mt-0'>
                         <Image
-                            src="/hero-removebg.png"
+                            src="/hero-removebg.webp"
                             alt="personal hero image"
                             width={1200}
-                            height={1600}
+                            height={800}
+                            sizes='(max-width:768px) 100vw, 50vw'
                             priority
-                            sizes=''
+                            className='select-none'
                         />
                     </div>
                 </div>

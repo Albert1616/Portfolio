@@ -2,11 +2,9 @@
 'use client'
 import { useEffect } from 'react'
 import { motion, stagger, useAnimate } from 'framer-motion'
-import { cn } from '@/lib/utils'
 
 export const TextGenerateEffect = ({
     words,
-    className,
     filter = true,
     duration = 0.5,
 }: {
@@ -38,7 +36,7 @@ export const TextGenerateEffect = ({
                     return (
                         <motion.span
                             key={word + idx}
-                            className={`${idx > 3 ? "text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-700 text-4xl lg:text-5xl" : "text-black dark:text-white font-extrabold text-5xl lg:text-6xl"} opacity-0`}
+                            className={`${idx > 3 ? "text-transparent bg-clip-text bg-gradient-to-tr from-primaryColor to-rose-300 text-6xl lg:text-7xl" : "text-black dark:text-white font-extrabold text-5xl lg:text-6xl"} opacity-0`}
                             style={{
                                 filter: filter ? 'blur(10px)' : 'none',
                             }}
@@ -52,7 +50,7 @@ export const TextGenerateEffect = ({
     }
 
     return (
-        <div className={cn('font-bold', className)}>
+        <div>
             <div className="mt-4">
                 <div className="text-center lg:text-left md:text-balance leading-snug tracking-wide">
                     {renderWords()}
