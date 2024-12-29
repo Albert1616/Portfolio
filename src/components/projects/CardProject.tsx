@@ -6,7 +6,7 @@ import { IoCodeSlash } from "react-icons/io5";
 import { motion, useInView } from 'motion/react';
 import Image from 'next/image'
 import Link from 'next/link';
-import { SiStyledcomponents, SiSpring, SiPostgresql, SiTypescript, SiVite, SiNodedotjs,SiNextdotjs} from "react-icons/si";
+import { SiStyledcomponents, SiSpring, SiPostgresql, SiTypescript, SiVite, SiNodedotjs, SiNextdotjs } from "react-icons/si";
 import { FaJava, FaReact } from "react-icons/fa";
 import {
     Tooltip,
@@ -18,14 +18,14 @@ import {
 type Props = {
     title: string
     description: string
-    src:string
+    src: string
     repository: string
     index: number,
     techs: string[],
     tags: string[]
 }
 
-const CardProject = ({ title,src, repository, index, techs, tags }: Props) => {
+const CardProject = ({ title, src, repository, index, techs, tags }: Props) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true })
 
@@ -35,26 +35,26 @@ const CardProject = ({ title,src, repository, index, techs, tags }: Props) => {
     }
 
     const IconTech = (tech: string, index: number) => {
-        const style = "p-1 size={35} text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor"
+        const style = "p-1  text-black dark:text-white hover:text-primaryColor dark:hover:text-primaryColor text-3xl md:text-4xl"
         switch (tech) {
             case "Typescript":
-                return <SiTypescript className={`${style} text-black`} key={index} size={35} />;
+                return <SiTypescript className={`${style} text-black`} key={index} />;
             case "React.js":
-                return <FaReact className={`${style}`} key={index} size={35} />;
+                return <FaReact className={`${style}`} key={index} />;
             case "Vite.js":
-                return <SiVite className={`${style}`} key={index} size={35} />;
+                return <SiVite className={`${style}`} key={index} />;
             case "Styled-components":
-                return <SiStyledcomponents className={`${style}`} key={index} size={35} />;
+                return <SiStyledcomponents className={`${style}`} key={index} />;
             case "Java":
-                return <FaJava className={`${style}`} key={index} size={35} />;
+                return <FaJava className={`${style}`} key={index} />;
             case "SpringBoot":
-                return <SiSpring className={`${style}`} key={index} size={35} />;
+                return <SiSpring className={`${style}`} key={index} />;
             case "Postgres":
-                return <SiPostgresql className={`${style}`} key={index} size={35} />;
+                return <SiPostgresql className={`${style}`} key={index} />;
             case "Next.js":
-                return <SiNextdotjs className={`${style}`} key={index} size={35} />;
+                return <SiNextdotjs className={`${style}`} key={index} />;
             case "Node.js":
-                return <SiNodedotjs className={`${style}`} key={index} size={35} />;
+                return <SiNodedotjs className={`${style}`} key={index} />;
             default:
                 return null;
         }
@@ -79,7 +79,7 @@ const CardProject = ({ title,src, repository, index, techs, tags }: Props) => {
                     <CardItem translateZ="100" className="w-full mt-6 h-[25em] group">
                         <div className='absolute items-center justify-center gap-5 w-full h-full inset-0 bg-black opacity-0 hidden group-hover:opacity-70
                             group-hover:flex transition-opacity duration-500'>
-                            {tags.includes('Web')&&(
+                            {tags.includes('Web') && (
                                 <Link href="/">
                                     <FiEye size={40} className='cursor-pointer rounded-full border border-gray-500 p-2 
                                         hover:border-white text-gray-500 hover:text-white' />

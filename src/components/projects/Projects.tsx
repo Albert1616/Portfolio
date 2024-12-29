@@ -28,13 +28,13 @@ const Projects = () => {
                 opts={{
                     loop: true
                 }}>
-                <CarouselContent className='-ml-44'>
+                <CarouselContent className='lg:-ml-44'>
                     {projetos.map((projeto, index) => (
                         <CarouselItem key={index} className='lg:basis-1/2 lg:pl-44 xl:basis-1/3'>
                             <CardProject key={index} title={projeto.title}
                                 description={projeto.description} src={projeto.image}
-                                techs={projeto.techs} tags={projeto.tags} index={index} 
-                                repository={projeto.repository}/>
+                                techs={projeto.techs} tags={projeto.tags} index={index}
+                                repository={projeto.repository} />
                         </CarouselItem>))}
                 </CarouselContent>
                 <CarouselPrevious className='text-black dark:text-white' />
