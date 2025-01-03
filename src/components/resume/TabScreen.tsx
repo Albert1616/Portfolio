@@ -27,7 +27,7 @@ const TabScreen = ({ tab }: Props) => {
                 >
                     {tab === 'Sobre mim' ? (
                         <div className="flex flex-col gap-4 mt-4 px-2">
-                            <p className="text-2xl font-medium text-justify text-black dark:text-white">
+                            <p className="text-xl sm:text-2xl font-medium text-justify text-black dark:text-white">
                                 Meu nome é Matheus, tenho 22 anos, sou desenvolvedor e estudante de TI.
                                 Meu primeiro contato com a área aconteceu em 2018, quando iniciei meus estudos
                                 no curso técnico em Informática para Internet no IFRN. Após finalizar o ensino médio,

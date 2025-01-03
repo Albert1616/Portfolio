@@ -23,6 +23,14 @@ const ubuntu = Ubuntu({
 export const metadata: Metadata = {
   title: 'Matheus Albert',
   description: 'Personal Portfólio to Matheus Albert',
+  icons: {
+    icon: [
+      {
+        url: './favicon.ico',
+        href: './favicon.ico',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({

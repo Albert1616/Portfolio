@@ -1,6 +1,13 @@
 /* eslint-disable prettier/prettier */
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer'
+
+interface emailProps {
+    name: string,
+    emailFrom: string,
+    subject: string,
+    message: string
+}
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -8,22 +15,28 @@ const transporter = nodemailer.createTransport({
     port: 587,
     secure: false,
     auth: {
-        user: 'matheus.albert2023@gmail.com',
-        pass: 'poyd qusk nbni cgtd',
+        user: process.env.EMAIL_TO,
+        pass: process.env.EMAIL_PASS,
     },
 })
 
-export async function GET() {
+export async function POST(req: NextRequest) {
     try {
-        const info = await transporter.sendMail({
-            from: 'matheus.albert2023@gmail.com',
-            to: 'matheusal2018@outlook.com',
-            subject: 'Teste',
-            html: `<p>TESTE DE EMAIL</p>`,
-        })
+        if (req.method === 'POST') {
 
-        return NextResponse.json({ message: info.response })
+            const { emailFrom, subject, message, name }: emailProps = await req.json();
+            const info = await transporter.sendMail({
+                from: emailFrom,
+                to: 'matheusal2018@outlook.com',
+                subject,
+                html: `<p>Ola meu nome é ${name}. ${message}</p>`,
+            })
+
+            return NextResponse.json({ message: info }, { status: 200 })
+        } else {
+            return NextResponse.json({ message: "Bad Request" }, { status: 400 })
+        }
     } catch (error) {
-        return NextResponse.json({ message: `Error to send email. ${error}` })
+        return NextResponse.json({ message: `Error to send email. ${error}` }, { status: 500 })
     }
 }

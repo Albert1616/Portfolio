@@ -64,7 +64,7 @@ export const EXPERIENCIA = [
 export const PROJETOS = [
   {
     title: 'Calculadora',
-    image: '/projetos/calculadora.png',
+    image: '/projetos/calculadora.webp',
     repository:
       'https://github.com/Albert1616/Projetos-React/tree/main/calculator',
     description:
@@ -74,7 +74,7 @@ export const PROJETOS = [
   },
   {
     title: 'Jogo da memória',
-    image: '/projetos/jogo_da_memoria.png',
+    image: '/projetos/jogo_da_memoria.webp',
     repository:
       'https://github.com/Albert1616/Projetos-React/tree/main/Memory_game',
     description:
@@ -84,7 +84,7 @@ export const PROJETOS = [
   },
   {
     title: 'Pomodoro',
-    image: '/projetos/pomodoro.png',
+    image: '/projetos/pomodoro.webp',
     repository:
       'https://github.com/Albert1616/Projetos-React/tree/main/pomodoro',
     description:

@@ -7,7 +7,7 @@ import { motion, useInView } from 'motion/react';
 import Image from 'next/image'
 import Link from 'next/link';
 import { SiStyledcomponents, SiSpring, SiPostgresql, SiTypescript, SiVite, SiNodedotjs, SiNextdotjs } from "react-icons/si";
-import { FaJava, FaReact } from "react-icons/fa";
+import { FaJava, FaReact, FaExternalLinkAlt } from "react-icons/fa";
 import {
     Tooltip,
     TooltipContent,
@@ -72,12 +72,16 @@ const CardProject = ({ title, src, repository, index, techs, tags }: Props) => {
                     h-auto rounded-xl p-6 border  ">
                     <CardItem
                         translateZ="50"
-                        className="text-2xl font-extrabold text-neutral-600 dark:text-white flex items-center justify-center w-full"
+                        className="text-2xl font-extrabold text-black dark:text-white flex items-center justify-center text-center gap-2 w-full"
                     >
                         {title}
+                        <Link href={repository}
+                            className='sm:hidden font-extrabold text-black text-xl' >
+                            <FaExternalLinkAlt />
+                        </Link>
                     </CardItem>
                     <CardItem translateZ="100" className="w-full mt-6 h-[25em] group">
-                        <div className='absolute items-center justify-center gap-5 w-full h-full inset-0 bg-black opacity-0 hidden group-hover:opacity-70
+                        <div className='absolute items-center justify-center gap-5 w-full h-full inset-0 bg-black opacity-0 hidden sm:group-hover:opacity-70
                             group-hover:flex transition-opacity duration-500'>
                             {tags.includes('Web') && (
                                 <Link href="/">
@@ -103,7 +107,7 @@ const CardProject = ({ title, src, repository, index, techs, tags }: Props) => {
                     <CardItem
                         as="p"
                         translateZ="60"
-                        className="mt-2 w-full flex items-end justify-end gap-4"
+                        className="mt-2 w-full flex items-center justify-center sm:items-end sm:justify-end gap-4"
                     >
                         {techs.map((tech, index) => (
                             <TooltipProvider key={index} delayDuration={100}>
