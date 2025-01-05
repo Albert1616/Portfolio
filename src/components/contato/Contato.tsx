@@ -91,7 +91,7 @@ const Contato = () => {
                             alt='Imagem animada que ilustra a sessão de contato'
                             className='select-none place-self-center h-full hidden lg:block' />
                         <div>
-                            <CardContato contato='Matheusal2018@outlook.com' icon={FaEnvelopeOpen} />
+                            <CardContato contato='matheus.albert.dev@gmail.com' icon={FaEnvelopeOpen} />
                             <CardContato contato='+55 (84) 98754-8540' icon={FaWhatsapp} />
                         </div>
                     </div>

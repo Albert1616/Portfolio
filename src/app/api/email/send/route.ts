@@ -27,9 +27,9 @@ export async function POST(req: NextRequest) {
             const { emailFrom, subject, message, name }: emailProps = await req.json();
             const info = await transporter.sendMail({
                 from: emailFrom,
-                to: 'matheusal2018@outlook.com',
+                to: 'matheus.albert.dev@gmail.com',
                 subject,
-                html: `<p>Ola meu nome é ${name}. ${message}</p>`,
+                html: `<p>Ola meu nome é ${name} Meu email:${emailFrom}. ${message}</p>`,
             })
 
             return NextResponse.json({ message: info }, { status: 200 })

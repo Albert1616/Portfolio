@@ -37,13 +37,15 @@ const HeroSection = () => {
                                 </Link>
                             </motion.div>
                             <motion.button
-                                className="w-3/4 md:w-64 text-xl font-semibold flex items-center 
-                            justify-center gap-3 bg-primaryColor text-black rounded-lg py-2 md:p-4
+                                className="w-3/4 md:w-64 bg-primaryColor rounded-lg py-2 md:p-4
                             hover:bg-[#8B2EE2] transition-colors duration-75"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                             >
-                                Baixar CV <FaDownload size={15} />
+                                <Link href="https://drive.google.com/file/d/126XOESfHYfn9nVxO5uKb6wNY39zjcZaQ/view?usp=drive_link"
+                                    className='flex items-center justify-center gap-2 text-xl font-semibold text-black'>
+                                    Baixar CV <FaDownload size={15} />
+                                </Link>
                             </motion.button>
                         </LazyMotion>
                     </div>

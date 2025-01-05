@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='absolute bottom-0 w-full text-black dark:text-white flex items-center justify-center'>
-                <p className='flex items-center justify-center gap-1'><BiCopyright /> Todos os diretios reservados.</p>
+                <p className='flex items-center justify-center gap-1'><BiCopyright size={12} /> Feito por Matheus Albert.</p>
             </div>
         </section>
     )
